@@ -3,10 +3,10 @@
 
 void prnMenu() {
 	cout << "*******************************************" << endl;
-	cout << "* 1. »ğÀÔ    2. »èÁ¦    3. Ãâ·Â   4. Á¾·á *" << endl;
+	cout << "* 1. ì‚½ì…    2. ì‚­ì œ    3. ì¶œë ¥   4. ì¢…ë£Œ *" << endl;
 	cout << "*******************************************" << endl;
 	cout << endl;
-	cout << "¿øÇÏ½Ã´Â ¸Ş´º¸¦ °ñ¶óÁÖ¼¼¿ä: ";
+	cout << "ì›í•˜ì‹œëŠ” ë©”ë‰´ë¥¼ ê³¨ë¼ì£¼ì„¸ìš”: ";
 }
 
 int main() {
@@ -14,11 +14,11 @@ int main() {
 	LinkedList<int> *p;
 	bool flag = false;
 
-	cout << "ÀÚ·á±¸Á¶ ¼±ÅÃ(1: Stack, Other: Linked List): ";
+	cout << "ìë£Œêµ¬ì¡° ì„ íƒ(1: Stack, Other: Linked List): ";
 	cin >> mode;
 
 	if (mode == 1)
-		p = new Stack<int>();    // Á¤¼ö¸¦ ÀúÀåÇÏ´Â ½ºÅÃ
+		p = new Stack<int>();    // ì •ìˆ˜ë¥¼ ì €ì¥í•˜ëŠ” ìŠ¤íƒ
 
 	else
 		p = new LinkedList<int>();
@@ -30,20 +30,20 @@ int main() {
 
 		switch (selectNumber) {
 		case 1:
-			cout << "¿øÇÏ½Ã´Â °ªÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä: ";
+			cout << "ì›í•˜ì‹œëŠ” ê°’ì„ ë§ˆìŒëŒ€ë¡œ ì…ë ¥í•´ì£¼ì„¸ìš”!!: ";
 			cin >> tmpItem;    p->Insert(tmpItem);
-			cout << tmpItem << "°¡ »ğÀÔµÇ¾ú½À´Ï´Ù." << endl;
+			cout << tmpItem << "ê°€ ì‚½ì…ë˜ì—ˆìŠµë‹ˆë‹¤." << endl;
 			break;
 
 		case 2:
 			if (p->Delete(tmpItem) == true)
-				cout << tmpItem << "°¡ »èÁ¦µÇ¾ú½À´Ï´Ù." << endl;
+				cout << tmpItem << "ê°€ ì‚­ì œë˜ì—ˆìŠµë‹ˆë‹¤." << endl;
 
-			else cout << "ºñ¾îÀÖ½À´Ï´Ù. »èÁ¦ ½ÇÆĞ" << endl;
+			else cout << "ë¹„ì–´ìˆìŠµë‹ˆë‹¤. ì‚­ì œ ì‹¤íŒ¨" << endl;
 			break;
 
 		case 3:
-			cout << "Å©±â: " << p->GetSize() << endl;
+			cout << "í¬ê¸°: " << p->GetSize() << endl;
 			p->Print();
 			break;
 
@@ -51,7 +51,7 @@ int main() {
 			flag = true;     break;
 
 		default:
-			cout << "Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù." << endl;
+			cout << "ì˜ëª» ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤." << endl;
 			break;
 
 		}
